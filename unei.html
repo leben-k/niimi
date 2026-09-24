@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, follow">
 <!-- 公開URLが決まったら href を書き換えてください -->
 <link rel="canonical" href="https://leben-k.github.io/niimi/unei.html">
 <title>運営者情報｜にいみ往来</title>
@@ -25,33 +25,36 @@
   <div class="wrap">
     <div class="op-card">
       <h1>運営者情報</h1>
-      <!-- ▼ 運営者情報をご記入ください -->
-      <div class="table-scroll">
-        <table class="info">
+        <table class="footer-op-table">
           <tr><th>サイト名</th><td>にいみ往来</td></tr>
-          <tr><th>運営者</th><td>【ご記入ください】</td></tr>
-          <tr><th>連絡先</th><td>【メールアドレス・お問い合わせフォームURLなど】</td></tr>
-          <tr><th>サイトの目的</th><td>岡山県新見市の観光・特産品・産業・鉄道の魅力を紹介する非公式の情報サイトです。</td></tr>
+          <tr><th>運営者</th><td>地域情報室</td></tr>
+          <tr><th>運営形態</th><td>自主運営</td></tr>
+          <tr><th>公開範囲</th><td>Web上限定</td></tr>
+          <tr><th>連絡先</th><td>下記フォームより</td></tr>
         </table>
-      </div>
-      <p style="margin-top:16px;font-size:.9rem;color:var(--ink-sub);">掲載しているイラストはすべて当サイトのオリジナルです。掲載情報の誤りにお気づきの際はご連絡ください。</p>
+        <div class="footer-contact">
+          <h5>連絡先</h5>
+          <!-- まにわ往来と同じFormspreeの送信先です。新見用に別フォームを作った場合は action のURLを差し替えてください -->
+          <form action="https://formspree.io/f/mbgjvbnv" method="POST">
+            <input type="hidden" name="_subject" value="【にいみ往来】お問い合わせ">
+            <label>あなたのメールアドレス
+              <input type="email" name="email" required>
+            </label>
+            <label>お名前（ニックネームOK）
+              <input type="text" name="name">
+            </label>
+            <label>連絡内容
+              <textarea name="message" required></textarea>
+            </label>
+            <button type="submit">送信する</button>
+          </form>
+          <span class="fs-privacy-link">送信内容はフォーム送信サービス「Formspree」を経由して送信されます。<a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspreeのプライバシーポリシー</a>もあわせてご確認ください。</span>
+        </div>
     </div>
   </div>
 </section>
 
 </main>
-<!-- ===================== アフィリエイト広告（下部・2枠横並び） ===================== -->
-<section class="section tint-pione">
-  <div class="wrap">
-    <div class="section-head"><span class="tag">PR</span><h2>広告</h2></div>
-    <div class="ad-row">
-      <!-- アフィリエイト広告1 ここに挿入してください -->
-      <div class="ad-slot"><span class="ad-label">広告</span><span class="ad-note">広告枠 1</span></div>
-      <!-- アフィリエイト広告2 ここに挿入してください -->
-      <div class="ad-slot"><span class="ad-label">広告</span><span class="ad-note">広告枠 2</span></div>
-    </div>
-  </div>
-</section>
 
 <footer class="site-footer">
   <div class="wrap">
@@ -66,8 +69,8 @@
       </div>
       <div>
         <h4>運営者情報</h4>
-        <p>サイトの運営者情報・連絡先は専用ページに掲載しています。</p>
-        <ul><li><a href="unei.html">運営者情報・連絡先</a></li></ul>
+        <p>サイトの運営者情報・連絡先フォームは専用ページに掲載しています。</p>
+        <ul><li><a href="unei.html">運営者情報・連絡先 &rarr;</a></li></ul>
         <h4 style="margin-top:14px;">公式情報</h4>
         <ul>
           <li><a href="https://www.city.niimi.okayama.jp/kanko/" target="_blank" rel="noopener">にいみ公式観光サイト「え〜とこ新見」</a></li>
@@ -78,8 +81,22 @@
     <div class="disclaimer">
       当サイトはアフィリエイト（広告）を掲載しており、掲載する広告・リンクを経由した商品購入等によって収益を得る場合があります。広告掲載商品の内容、品質、価格、在庫状況、取引条件等については各広告主・販売元の情報をご確認ください。広告のご利用によって生じたいかなる損害・不利益についても、当サイト運営者は一切の責任を負いかねますので、あらかじめご了承ください。また、当サイトに掲載する観光・特産品・施設情報は作成時点（2026年9月）のものであり、内容の正確性・最新性を保証するものではありません。営業時間・料金・開催日などは変更される場合がありますので、実際のご利用の際は各施設・自治体の公式情報を必ずご確認ください。
     </div>
-    <p class="copyright">© にいみ往来（非公式ファンサイト）</p>
+    <div class="disclaimer" style="margin-top:14px;">
+      <strong style="color:#fff;">プライバシーポリシー</strong><br>
+      当サイトが独自に取得・保存する個人情報はありません。「<a href="unei.html">運営者情報・連絡先</a>」ページのフォームからお送りいただいた内容（メールアドレス・お名前・連絡内容）は、フォーム送信サービス「Formspree」を経由して運営者宛のメールに転送されます。送信の際、IPアドレスやブラウザの種類等の情報がFormspree社によって取得される場合があります。詳細は<a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspreeのプライバシーポリシー</a>をご確認ください。恐れ入りますが、パスワードやマイナンバーなど機微な情報の送信はお控えください。また、当サイトはWebフォント表示のためGoogle Fonts等の外部サービスに接続しており、その際にアクセス情報が当該サービスに送信される場合があります。加えて、当サイトに掲載するアフィリエイト（広告）のリンクを経由した場合、各広告サービス・提供元によってクッキー等を用いたアクセス情報の取得が行われることがあります。詳細は各サービスが公開するプライバシーポリシーをご確認ください。本ポリシーの内容は、必要に応じて予告なく変更することがあります。
+    </div>
+    <div class="copyright"><span id="copyright-text">© 2026 にいみ往来</span></div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var startYear = 2026;
+  var currentYear = new Date().getFullYear();
+  var yearText = currentYear > startYear ? (startYear + '-' + currentYear) : String(startYear);
+  var el = document.getElementById('copyright-text');
+  if (el) { el.textContent = '© ' + yearText + ' にいみ往来'; }
+})();
+</script>
 </body>
 </html>
