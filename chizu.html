@@ -9,7 +9,7 @@
 <title>観光マップ・位置関係｜にいみ往来 岡山県新見市</title>
 <meta name="description" content="新見市の主な観光地・名勝の位置関係がわかる地図と模式図。新見駅・新見ICからの所要時間、最寄り駅からの行き方、近いスポット同士の距離をまとめました。">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="leaflet/leaflet.css">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
     <div class="section-head"><span class="tag">インタラクティブ地図</span><h2>地図で見る、新見の見どころ</h2><p>拡大・縮小やドラッグで動かせます。下のボタンで種類ごとに表示を切り替えられます。</p></div>
     <div class="map-filters" role="group" aria-label="表示する種類"><button class="f-btn" data-cat="station" aria-pressed="true"><span class="dot" style="background:#1C2B2E"></span>駅・まちなか</button><button class="f-btn" data-cat="sight" aria-pressed="true"><span class="dot" style="background:#C8373B"></span>名所・史跡・鍾乳洞</button><button class="f-btn" data-cat="nature" aria-pressed="true"><span class="dot" style="background:#4E7F34"></span>自然・景勝地</button><button class="f-btn" data-cat="food" aria-pressed="true"><span class="dot" style="background:#C98A0A"></span>道の駅・グルメ</button><button class="f-btn" data-cat="onsen" aria-pressed="true"><span class="dot" style="background:#16797A"></span>温泉・宿</button></div>
     <div id="niimi-map" class="map-box" aria-label="新見市の観光地の地図"></div>
-    <p class="map-note">背景地図：国土地理院「地理院タイル」／OpenStreetMap。番号は下の早見表と対応しています。</p>
+    <p class="map-note">背景地図：出典 <a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">国土地理院「地理院タイル」</a>（地図は加工せずそのまま表示しています。ピン・番号は当サイトが追加したものです）。右上のボタンで「淡色」と「標準」を切り替えられます。</p>
   </div>
 </section>
 
@@ -73,7 +73,7 @@
   </div>
 </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="leaflet/leaflet.js"></script>
 <script>
 (function(){
   var SPOTS = [{"id": 1, "name": "新見駅", "cat": "station", "lat": 34.98744, "lng": 133.45672, "area": "中央", "car": "新見ICから約1km（駅前ホテル案内より）", "pub": "JR伯備線・姫新線・芸備線", "note": "駅前に新見市観光案内所"}, {"id": 2, "name": "新見御殿町", "cat": "sight", "lat": 34.97703, "lng": 133.47028, "area": "中央", "car": "新見ICから約10分", "pub": "JR新見駅から徒歩約15〜20分", "note": "ピンは新見市役所の位置。御殿町は市役所の周辺です"}, {"id": 3, "name": "井倉洞・井倉峡", "cat": "sight", "lat": 34.92794, "lng": 133.52381, "area": "南東", "car": "新見ICから約20分／賀陽ICから約40分", "pub": "JR井倉駅から徒歩約15分", "note": "大雨による臨時休洞あり。事前に確認を"}, {"id": 4, "name": "羅生門・羅生門さくら公園", "cat": "nature", "lat": 34.93811, "lng": 133.56054, "area": "南東", "car": "新見IC・大佐SIC・北房ICから約30分", "pub": "JR井倉駅からバス約20分＋徒歩約15分", "note": "駐車場あり"}, {"id": 5, "name": "満奇洞", "cat": "sight", "lat": 34.97175, "lng": 133.58342, "area": "南東", "car": "北房ICから約20分／新見ICから約30分", "pub": "JR井倉駅から満奇洞行きバス約40分（終点）", "note": "駐車場 普通車150台"}, {"id": 6, "name": "夢すき公園（親子孫水車）", "cat": "sight", "lat": 34.98704, "lng": 133.38657, "area": "神郷", "car": "新見ICから約15分", "pub": "JR備中神代駅から徒歩約26〜30分", "note": "水曜休"}, {"id": 7, "name": "道の駅 鯉が窪", "cat": "food", "lat": 34.9318, "lng": 133.33169, "area": "哲西", "car": "新見ICから約20〜25分／東城ICから約10分", "pub": "JR芸備線 矢神駅から徒歩約30分", "note": "きらめき広場・哲西に隣接"}, {"id": 8, "name": "鯉が窪湿原", "cat": "nature", "lat": 34.91806, "lng": 133.35444, "area": "哲西", "car": "新見ICから約30分", "pub": "JR矢神駅または野馳駅からタクシー約10分", "note": "開場は4月最終土曜〜11月3日"}, {"id": 9, "name": "三室峡", "cat": "nature", "lat": 35.04093, "lng": 133.32869, "area": "神郷", "car": "新見ICから約30〜40分", "pub": "JR足立駅からタクシー約10分", "note": "シャクナゲ4月下旬〜5月上旬、紅葉10月下旬〜"}, {"id": 10, "name": "新見千屋温泉いぶきの里", "cat": "onsen", "lat": 35.16857, "lng": 133.41044, "area": "北（千屋）", "car": "新見ICから約30分（国道180号）", "pub": "JR新見駅から路線バス約50分（終点）", "note": "スキー場・グランピング隣接"}, {"id": 11, "name": "大佐山", "cat": "nature", "lat": 35.07719, "lng": 133.53909, "area": "大佐", "car": "大佐SIC（ETC専用）から約15分／新見ICから約40分", "pub": "JR刑部駅からタクシー約30分", "note": "標高988m。オートキャンプ場あり"}, {"id": 12, "name": "夏日の極上水", "cat": "nature", "lat": 35.10063, "lng": 133.53254, "area": "大佐", "car": "大佐SIC（ETC専用）から約20分／新見ICから約40分", "pub": "JR刑部駅から赤松行きバス約20分＋徒歩約5分", "note": "駐車場なし"}];
@@ -85,9 +85,8 @@
   }
   var gsi = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {maxZoom:18, attribution:'<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>'});
   var pale = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png', {maxZoom:18, attribution:'<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>'});
-  var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom:19, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'});
   var map = L.map(box, {scrollWheelZoom:false, layers:[pale]});
-  L.control.layers({'地理院地図（淡色）':pale, '地理院地図（標準）':gsi, 'OpenStreetMap':osm}).addTo(map);
+  L.control.layers({'地理院地図（淡色）':pale, '地理院地図（標準）':gsi}).addTo(map);
   L.control.scale({imperial:false}).addTo(map);
   var groups = {};
   var bounds = [];
@@ -156,7 +155,7 @@
     </div>
     <div class="disclaimer" style="margin-top:14px;">
       <strong style="color:#fff;">プライバシーポリシー</strong><br>
-      当サイトが独自に取得・保存する個人情報はありません。「<a href="unei.html">運営者情報・連絡先</a>」ページのフォームからお送りいただいた内容（メールアドレス・お名前・連絡内容）は、フォーム送信サービス「Formspree」を経由して運営者宛のメールに転送されます。送信の際、IPアドレスやブラウザの種類等の情報がFormspree社によって取得される場合があります。詳細は<a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspreeのプライバシーポリシー</a>をご確認ください。恐れ入りますが、パスワードやマイナンバーなど機微な情報の送信はお控えください。また、当サイトはWebフォント表示のためGoogle Fonts等の外部サービスに接続しており、その際にアクセス情報が当該サービスに送信される場合があります。加えて、当サイトに掲載するアフィリエイト（広告）のリンクを経由した場合、各広告サービス・提供元によってクッキー等を用いたアクセス情報の取得が行われることがあります。詳細は各サービスが公開するプライバシーポリシーをご確認ください。本ポリシーの内容は、必要に応じて予告なく変更することがあります。
+      当サイトが独自に取得・保存する個人情報はありません。「<a href="unei.html">運営者情報・連絡先</a>」ページのフォームからお送りいただいた内容（メールアドレス・お名前・連絡内容）は、フォーム送信サービス「Formspree」を経由して運営者宛のメールに転送されます。送信の際、IPアドレスやブラウザの種類等の情報がFormspree社によって取得される場合があります。詳細は<a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspreeのプライバシーポリシー</a>をご確認ください。恐れ入りますが、パスワードやマイナンバーなど機微な情報の送信はお控えください。また、当サイトはWebフォント表示のためGoogle Fontsに、観光マップの背景地図表示のため国土地理院の地図配信サーバー（地理院タイル）に接続しており、その際にアクセス情報が当該サービスに送信される場合があります。加えて、当サイトに掲載するアフィリエイト（広告）のリンクを経由した場合、各広告サービス・提供元によってクッキー等を用いたアクセス情報の取得が行われることがあります。詳細は各サービスが公開するプライバシーポリシーをご確認ください。本ポリシーの内容は、必要に応じて予告なく変更することがあります。
     </div>
     <div class="copyright"><span id="copyright-text">© 2026 にいみ往来</span></div>
   </div>
